@@ -1,0 +1,952 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+.overlay {
+  display: none;
+}
+
+.invisible {
+  display: none;
+}
+
+.mobile-project-content {
+  display: none;
+}
+
+.animation-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  transition: background-color 0.3s ease; /* Apply the transition to the animation area */
+}
+
+.box-area {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.box-area li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 25px;
+  height: 25px;
+  background: rgba(96, 45, 250, 0.3);
+  animation: animate 20s linear infinite;
+  bottom: -150px;
+}
+
+.box-area li:nth-child(1) {
+  left: 86%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+  animation-duration: 10s;
+}
+.box-area li:nth-child(2) {
+  left: 12%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 1.5s;
+  animation-duration: 15s;
+}
+
+.box-area li:nth-child(3) {
+  left: 70%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 0s;
+}
+
+.box-area li:nth-child(4) {
+  left: 42%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 15s;
+}
+
+.box-area li:nth-child(5) {
+  left: 65%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 0s;
+}
+
+.box-area li:nth-child(6) {
+  left: 15%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3.5s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-800px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 50px;
+  transition: background-color 0.3s ease;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem; /* Add padding instead of fixed height */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Use a fixed value for gap */
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 25px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  transition: background-image 0.3s ease;
+}
+
+a:hover {
+  background-image: linear-gradient(to left, #0099ff 0%, #cc33ff 100%);
+  /* Make the text transparent to show the background gradient */
+  color: transparent;
+  /* Add a background clip to apply the gradient only to the text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Set a transparent background-color to ensure proper text display */
+  background-color: transparent;
+}
+
+/* Toggle Icons light/dark mode */
+
+.iconToggleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggleButtonDark {
+  background: none; /* Remove background color */
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.toggleButtonDark img {
+  width: 50px;
+  height: 30px;
+}
+
+.toggleButtonLight {
+  background: none; /* Remove background color */
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggleButtonLight img {
+  width: 50px;
+  height: 30px;
+  filter: invert(100%);
+}
+
+.darkMode-active {
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.darkMode-active a {
+  color: #fff; /* Change link text color to white */
+  transition: background-image 0.3s ease;
+}
+
+.darkMode-active a:hover {
+  background-image: linear-gradient(to left, #0099ff 0%, #cc33ff 100%);
+  /* Make the text transparent to show the background gradient */
+  color: transparent;
+  /* Add a background clip to apply the gradient only to the text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Set a transparent background-color to ensure proper text display */
+  background-color: transparent;
+}
+
+.darkMode-active h1,
+.darkMode-active h2,
+.darkMode-active h3,
+.darkMode-active p {
+  color: #fff; /* Change text color to white */
+  transition: color 0.3s ease;
+}
+
+.darkMode-active .card {
+  background-color: #0a0d29; /* Change to the desired background color */
+  transition: background-color 0.3s ease; /* Add transition for background color */
+}
+
+.darkMode-active .project-card {
+  background-color: #0a0d29; /* Change to the desired background color */
+  transition: background-color 0.3s ease; /* Add transition for background color */
+}
+
+.darkMode-active .animation-area {
+  background-color: #040615; /* Change the background color for dark mode */
+}
+
+.darkMode-active .box-area li {
+  background: rgba(
+    40,
+    105,
+    130,
+    0.7
+  ); /* Change the background color for the cubes in dark mode */
+
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/*Mobile Dark Mode*/
+
+.darkMode-active .mobile-project-card {
+  background-color: #0a0d29;
+  transition: background-color 0.3s ease; /* Add transition for background color */
+}
+
+.darkMode-active .previousBtn {
+  background: #0a0d29;
+  transition: background-color 0.3s ease; /* Add transition for background color */
+}
+
+.darkMode-active .nextBtn {
+  background: #0a0d29;
+  transition: background-color 0.3s ease; /* Add transition for background color */
+}
+
+.darkMode-active .previousBtn img,
+.darkMode-active .nextBtn img {
+  filter: invert(100%) brightness(100%);
+}
+
+/*Home Style*/
+
+.home-section-Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.inner-container-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.left-Container-Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6;
+}
+
+.intro {
+  font-size: 35px;
+}
+
+.name {
+  background: linear-gradient(to left, #0099ff 0%, #cc33ff 100%);
+  -webkit-background-clip: text; /* For Safari/WebKit browsers */
+  background-clip: text;
+  color: transparent;
+  font-size: 75px;
+  letter-spacing: 2px;
+}
+
+.career {
+  font-size: 30px;
+}
+
+.right-Img-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container {
+  background-image: url("images/bigPortrait.png");
+  width: 300px;
+  height: 320px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+/*Section Style*/
+
+.service-section-Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.inner-container-section {
+  max-width: 1300px;
+  padding: 0 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.service-title {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: #fff;
+  padding: 50px 25px;
+  width: calc(26% - 20px);
+  border-radius: 6px;
+  /*background-color: #222;*/
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  background: linear-gradient(to left, #0099ff 0%, #cc33ff 100%);
+}
+
+.box {
+  transition: all 0.3s ease;
+}
+
+.card:hover .box {
+  transform: scale(1.05);
+}
+
+.box i {
+  font-size: 50px;
+  background: linear-gradient(to left, #0099ff, #cc33ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: background 0.3s ease, color 0.3s ease; /* Added transition for color */
+}
+
+.card:hover .box i {
+  color: #fff;
+}
+
+.box h3 {
+  font-size: 25px;
+  padding: 10px 0 7px 0;
+}
+
+/*Project Style*/
+.project-section-Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.inner-container-projects {
+  max-width: 1300px;
+  padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.project-title {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.project-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-card {
+  background-color: #fff;
+  position: relative; /* Add this to make positioning relative for the card */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  max-width: 350px; /* Set the desired width for all cards */
+  border-radius: 10px;
+  text-align: center;
+  user-select: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.project-image {
+  position: relative;
+  display: flex;
+
+  justify-content: center;
+  height: 100%;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.overlay-description {
+  padding: 20px;
+}
+
+.overlay-description h3 {
+  font-size: 16px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.overlay-description p {
+  font-size: 15px;
+  text-align: center;
+  padding: 15px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  gap: 80px;
+}
+
+button {
+  background: linear-gradient(to left, #0099ff 0%, #cc33ff 100%);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*About Style*/
+.about-section-Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  min-height: 90vh;
+}
+
+.about-title {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.inner-container-about {
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-img {
+  background-image: url("images/ProfileBlackandWhite.jpg");
+  width: 200rem;
+  height: 320px;
+  /* border: 1px solid black; */
+  background-size: cover;
+  border-radius: 50%;
+  background-position: center center;
+}
+
+.about-text {
+  text-align: left;
+  font-size: 20px;
+}
+
+/*Footer Section*/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+/* Adjust icon styles as needed */
+footer i {
+  font-size: 24px;
+  margin: 0 10px; /* Add some spacing between icons */
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1180px) {
+  /*When the screen starts to get small*/
+
+  .mobile-project-content {
+    display: none;
+  }
+
+  /* Home Section */
+  .inner-container-home {
+    padding: 0 25px;
+    flex-direction: column; /* Stack content vertically */
+    gap: 30px; /* Reduce the gap between content */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text within its container */
+  }
+
+  .left-Container-Home {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6;
+  }
+
+  .right-Img-Container {
+    display: none;
+  }
+
+  .img-container {
+    width: 200px; /* Adjust the image width */
+    height: 220px; /* Adjust the image height */
+  }
+
+  .intro {
+    font-size: 30px; /* Adjust font size */
+  }
+
+  .name {
+    font-size: 60px;
+  }
+
+  .career {
+    font-size: 25px; /* Adjust font size */
+  }
+
+  /* Apply the same adjustments for the inner-container-home as you did for inner-container-section */
+
+  /*Section Style*/
+  .inner-container-section {
+    padding: 0 25px;
+  }
+
+  .card {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+
+  /*Project Style*/
+
+  .inner-container-projects {
+    align-items: center; /* Center items on smaller screens */
+    gap: 50px; /* Reduce the gap between project cards */
+  }
+
+  .project-card {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+
+  .project-image img {
+    height: 270px;
+  }
+
+  /* About Section */
+  .inner-container-about {
+    flex-direction: column; /* Stack content vertically */
+    gap: 50px; /* Reduce the gap between content */
+  }
+
+  .about-img {
+    margin-bottom: 20px; /* Add some space between image and text */
+    width: 200px; /* Adjust width */
+    height: 200px; /* Adjust height */
+    background-image: url("images/ProfileBlackandWhite.jpg"); /* Add background image */
+    background-size: cover; /* Adjust background size */
+    background-position: center center; /* Adjust background position */
+  }
+
+  .about-img img {
+    width: 200px; /* Adjust the image width */
+    height: auto; /* Let the height adjust proportionally */
+  }
+
+  .about-text {
+    text-align: center;
+    font-size: 20px;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  /*Mobile User*/
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0; /* Initially, the overlay is transparent */
+    pointer-events: none; /* This ensures clicks don't interact with the overlay */
+    transition: opacity 0.3s; /* Add a smooth transition effect */
+    z-index: 1;
+  }
+
+  main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 80px;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 100; /* Ensure the header appears above other content */
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 200px;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -550px; /* Start the sidebar outside the screen */
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    color: #fff;
+    transition: right 0.3s;
+    z-index: 1;
+  }
+
+  .darkMode-active .sidebar {
+    background-color: #040615;
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+  }
+
+  .nav-list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .nav-list ul li {
+    list-style: none;
+    display: block;
+    padding: 10px 25px;
+  }
+
+  .nav-list ul li a {
+    color: hsl(240, 100%, 5%);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 20px;
+  }
+
+  .darkMode-active .nav-list ul li a {
+    color: #fff;
+    transition: background-image 0.3s ease;
+  }
+
+  .nav-list ul li a:hover {
+    background-image: linear-gradient(to left, #0099ff 0%, #cc33ff 100%);
+    /* Make the text transparent to show the background gradient */
+    color: transparent;
+    /* Add a background clip to apply the gradient only to the text */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Set a transparent background-color to ensure proper text display */
+    background-color: transparent;
+  }
+
+  .content {
+    margin-right: 0px; /* Initially, no margin */
+    transition: margin-right 0.3s;
+    padding-top: 60px;
+  }
+
+  /*Hamburger Icon*/
+
+  .hamburger-icon span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin: 4px 0;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .darkMode-active .hamburger-icon span {
+    background-color: white; /* Change the background color to white */
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .darkMode-active .hamburger-icon span {
+  }
+
+  /* Styles for the active hamburger icon */
+  .hamburger-icon.active span:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+  }
+
+  .hamburger-icon.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-icon.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  .hamburger-icon.active span {
+    width: 30px; /* Equal width for all spans in the active state */
+  }
+
+  /* Styles for showing/hiding the sidebar */
+  .sidebar-active {
+    right: 0; /* Slide the sidebar into view */
+  }
+
+  .content-active {
+    margin-right: 250px;
+  }
+
+  .darkMode-active header {
+    background-color: #040615; /* Change to the desired background color */
+    transition: background-color 0.3s ease; /* Add transition for background color */
+  }
+
+  /* Home Section */
+
+  .intro {
+    font-size: 25px; /* Adjust font size */
+  }
+
+  .name {
+    font-size: 50px; /* Adjust font size for the gradient text */
+  }
+
+  .career {
+    font-size: 25px; /* Adjust font size */
+  }
+
+  /* Apply the same adjustments for the img-container as you did for the project-card */
+  .img-container {
+    width: 160px; /* Adjust the image width */
+    height: 180px; /* Adjust the image height */
+  }
+
+  /*Section Style*/
+  .card {
+    width: 100%;
+  }
+
+  /*Project Style*/
+
+  .project-content {
+    display: none;
+  }
+
+  .mobile-project-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 50px;
+  }
+
+  .mobile-project-card {
+    background-color: #fff;
+    position: relative; /* Add this to make positioning relative for the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    max-width: 350px; /* Set the desired width for all cards */
+    border-radius: 10px;
+    text-align: center;
+    user-select: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  .mobile-project-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .mobile-project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  .mobile-overlay-description {
+    padding: 20px;
+  }
+
+  .mobile-overlay-description h3 {
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .mobile-overlay-description p {
+    font-size: 15px;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .mobile-btn-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    gap: 80px;
+  }
+
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .arrow-containers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .previousBtn,
+  .nextBtn {
+    background: #fff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  .previousBtn img,
+  .nextBtn img {
+    filter: invert(0%) brightness(0%);
+  }
+
+  /* About Section */
+  .about-title {
+    font-size: 30px; /* Adjust font size */
+  }
+
+  .about-text p {
+    font-size: 18px; /* Adjust font size */
+    padding: 15px;
+  }
+
+  /* Apply the same adjustments for the about-img as you did for the img-container */
+  .about-img img {
+    width: 160px; /* Adjust the image width */
+    height: 160px; /* Adjust the image height */
+  }
+}

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Josefin+Sans:wght@300;400;600&family=Kumbh+Sans:wght@400;700&family=Libre+Franklin:wght@300;600;700&family=Manrope:wght@800&family=Mina&family=Montserrat:wght@500;700&family=Outfit&family=Overpass&family=Roboto:wght@400;700&family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>JamesFlores.dev</title>
+    <script
+      src="https://kit.fontawesome.com/29ad47dbab.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="overlay"></div>
+      <header>
+        <nav>
+          <div class="iconToggleContainer">
+            <button id="toggleDark" class="toggleButtonDark">
+              <img src="images/moon-svgrepo-com.svg" alt="moon" />
+            </button>
+            <button id="toggleLight" class="toggleButtonLight invisible">
+              <img src="images/sun-alt-svgrepo-com.svg" alt="sun" />
+            </button>
+          </div>
+          <div class="navbar">
+            <div class="hamburger-icon" onclick="toggleSidebar()">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <!-- Move the sidebar inside the nav tag -->
+          <div class="sidebar">
+            <div class="nav-list">
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <section id="home" class="home-section-Container">
+        <!-- Your home content goes here -->
+        <div class="inner-container-home">
+          <div class="left-Container-Home">
+            <h2 class="intro">Hello , My Name Is</h2>
+            <h1><span class="name">James Flores</span></h1>
+            <h3 class="career">I'm a Front-End Developer</h3>
+          </div>
+          <!--
+          <div class="right-Img-Container">
+            <div class="img-container">
+              <img src="images/bigPortrait.png" alt="betaImg">
+            </div>
+          </div>
+        --></div>
+      </section>
+
+      <!--SERVICE SECTION-->
+      <section id="service" class="service-section-Container">
+        <!-- Your services content goes here -->
+        <div class="inner-container-section">
+          <h1 class="service-title">Services</h1>
+
+          <div class="content">
+            <div class="card">
+              <div class="box">
+                <i class="fa-solid fa-code"></i>
+                <h3>Web Developer</h3>
+                <p>
+                  I am a skilled web developer, proficient in crafting efficient
+                  and visually appealing websites that deliver seamless user
+                  experiences.
+                </p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="box">
+                <i class="fa-brands fa-unity"></i>
+                <h3>Game Designer</h3>
+                <p>
+                  I excel as a game designer, harnessing my creative vision and
+                  strategic thinking to craft immersive and captivating gaming
+                  experiences that resonate with players.
+                </p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="box">
+                <i class="fa-solid fa-cube"></i>
+                <h3>3D Animator</h3>
+                <p>
+                  I am an exceptional 3D animator, breathing life into
+                  characters and scenes through my mastery of movement, timing,
+                  and attention to detail, resulting in captivating and visually
+                  stunning animations.
+                </p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="box">
+                <i class="fa-solid fa-pen-nib"></i>
+                <h3>Graphic Designer</h3>
+                <p>
+                  I am a standout graphic designer, seamlessly fusing artistic
+                  flair with a deep understanding of design principles to create
+                  visually striking and impactful designs that leave a lasting
+                  impression.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--PROJECT SECTION-->
+      <section id="projects" class="project-section-Container">
+        <!-- Your projects content goes here -->
+        <div class="inner-container-projects">
+          <h2 class="project-title">Projects</h2>
+
+          <div class="project-content">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="images/new-manage.png" alt="Project 1" />
+              </div>
+              <div class="overlay-description">
+                <h3>Manage Landing Page</h3>
+                <p>
+                  This Manage landing page showcases client testimonials in a
+                  sleek horizontal slider, providing a dynamic presentation of
+                  user feedback. Additionally, the newsletter sign-up form
+                  incorporates error handling, generating messages if the input
+                  field is empty or if the entered email address is not
+                  correctly formatted, ensuring a seamless and error-free
+                  interaction.
+                </p>
+              </div>
+
+              <div class="btn-container">
+                <button
+                  onclick="window.open('https://github.com/james-rod/manage-landing-page', '_blank')"
+                >
+                  Github
+                </button>
+                <button
+                  onclick="window.open('https://james-rod.github.io/manage-landing-page/', '_blank')"
+                >
+                  Demo Live
+                </button>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-image">
+                <img src="images/e-commerces-img.jpg" alt="Project 2" />
+              </div>
+              <div class="overlay-description">
+                <h3>E-Commerces Project</h3>
+                <p>
+                  This E-commerce product page provides a dynamic user
+                  experience with a lightbox gallery opening on a click,
+                  allowing customers to explore detailed visuals and seamlessly
+                  switch between images through small thumbnails; the responsive
+                  design a seamless and visually engaging shopping experience on
+                  different device screen sizes.
+                </p>
+              </div>
+
+              <div class="btn-container">
+                <button
+                  onclick="window.open('https://github.com/james-rod/E-commerce-product-page', '_blank')"
+                >
+                  Github
+                </button>
+                <button
+                  onclick="window.open('https://james-rod.github.io/E-commerce-product-page/', '_blank')"
+                >
+                  Demo Live
+                </button>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-image">
+                <img src="images/github-search-img.png" alt="Project 3" />
+              </div>
+              <div class="overlay-description">
+                <h3>DevFinder</h3>
+                <p>
+                  DevFinder is a GitHub Profile Viewer project that adeptly
+                  leverages the GitHub Users third-party API to fetch pertinent
+                  profile information. This project focus on delivering a sleek
+                  and user-friendly interface. The responsive design ensures an
+                  optimal layout, adapting seamlessly to various device screen
+                  sizes for an enhanced user experience.
+                </p>
+              </div>
+
+              <div class="btn-container">
+                <button
+                  onclick="window.open('https://github.com/james-rod/github-user-search-app', '_blank')"
+                >
+                  Github
+                </button>
+                <button
+                  onclick="window.open('https://james-rod.github.io/github-user-search-app/', '_blank')"
+                >
+                  Demo Live
+                </button>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-image">
+                <img src="images/weather-img.png" alt="Project 4" />
+              </div>
+              <div class="overlay-description">
+                <h3>API Weather App</h3>
+                <p>
+                  I developed a weather application in React.js, utilizing the
+                  OpenWeatherMap API for real-time weather data, and prioritized
+                  an engaging user experience with a comprehensive interface.
+                  The application's responsive design ensures a seamless and
+                  enhanced viewing experience by adapting to various screen
+                  sizes for optimal layout accessibility.
+                </p>
+              </div>
+
+              <div class="btn-container">
+                <button
+                  onclick="window.open('https://github.com/james-rod/weather-app', '_blank')"
+                >
+                  Github
+                </button>
+                <button
+                  onclick="window.open('https://james-rod.github.io/weather-app/', '_blank')"
+                >
+                  Demo Live
+                </button>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-image">
+                <img
+                  src="images/interactive-card-form-img.jpg"
+                  alt="Project 5"
+                />
+              </div>
+              <div class="overlay-description">
+                <h3>Card Details Form Interactive</h3>
+                <p>
+                  This Interactive Card Details Form offers a dynamic user
+                  experience by updating card information in real time as users
+                  fill in the form, while intelligently generating error
+                  messages for empty fields or incorrectly formatted card
+                  details upon submission. Its responsive design ensures an
+                  optimal layout for users across different devices, enhancing
+                  accessibility and usability.
+                </p>
+              </div>
+
+              <div class="btn-container">
+                <button
+                  onclick="window.open('https://github.com/james-rod/Interactive-card-details-form', '_blank')"
+                >
+                  Github
+                </button>
+                <button
+                  onclick="window.open('https://james-rod.github.io/Interactive-card-details-form/', '_blank')"
+                >
+                  Demo Live
+                </button>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-image">
+                <img src="images/api-quote-img.png" alt="Project 6" />
+              </div>
+              <div class="overlay-description">
+                <h3>API Advice Generator</h3>
+                <p>
+                  I designed a user-friendly advice generator app using the
+                  Advice Slip API, offering interactive elements like hover
+                  states and enabling users to generate new advice by clicking
+                  the dice icon. The app's seamless adaptation to different
+                  device screen sizes, through responsive design, ensures an
+                  optimized viewing experience, enhancing the overall usability
+                  of the advice generator.
+                </p>
+              </div>
+
+              <div class="btn-container">
+                <button
+                  onclick="window.open('https://github.com/james-rod/Advice-generator-app', '_blank')"
+                >
+                  Github
+                </button>
+                <button
+                  onclick="window.open('https://james-rod.github.io/Advice-generator-app/', '_blank')"
+                >
+                  Demo Live
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mobile-project-content">
+            <div class="mobile-project-card">
+              <div class="mobile-project-image">
+                <img src="images/new-manage.png" alt="Project 1" />
+              </div>
+              <div class="mobile-overlay-description">
+                <h3>Manage Landing Page</h3>
+                <p>
+                  I created this Landing Page using React.js, featuring a
+                  responsive design with email validation for improved
+                  user-interface navigation. My diverse front-end projects,
+                  including those inspired by Front End Mentor, showcase my web
+                  development and design skills.
+                </p>
+              </div>
+              <div class="mobile-btn-container">
+                <button class="mobile-button">Github</button>
+                <button class="mobile-button">Demo Live</button>
+              </div>
+            </div>
+
+            <div class="arrow-containers">
+              <button class="previousBtn">
+                <img src="images/icon-previous.svg" alt="previous-Btn" />
+              </button>
+              <button class="nextBtn">
+                <img src="images/icon-next.svg" alt="next-btn" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--ABOUT SECTION-->
+      <section id="about" class="about-section-Container">
+        <!-- Your about me content goes here -->
+        <h2 class="about-title">About Me</h2>
+        <div class="inner-container-about">
+          <div class="about-img"></div>
+          <div class="about-text">
+            <p>
+              As a frontend developer, I specialize in crafting visually
+              appealing and user-friendly websites that seamlessly blend
+              aesthetics with functionality. Through my expertise, I ensure that
+              users not only have a captivating visual experience but also an
+              intuitive and interactive interface that enhances their
+              engagement. In addition to my proficiency in web development, I
+              also work as a Game Developer and 3D Modeler as part of a few side
+              projects. This diverse skill set enables me to bring a distinctive
+              and creative viewpoint to my projects, resulting in immersive
+              digital experiences across a range of domains.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <a href="https://github.com/james-rod"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://www.instagram.com/jamesbrod21/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/james-rodriguez-502672222/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="https://discordapp.com/users/365888311065051146"
+          ><i class="fa-brands fa-discord"></i
+        ></a>
+      </footer>
+
+      <div class="animation-area">
+        <ul class="box-area">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
